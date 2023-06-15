@@ -1,21 +1,79 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Weather App</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Weather In Your City</h1>
-        <form id="search-form">
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button type="submit">Search</button>
-        </form>
-        <div id="current-weather"></div>
-        <div class="week-calendar" id="forecast"></div>
-        <div id="search-history"></div>
-    </div>
+<html lang="en">
 
-    <script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Weather app</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather In Your City</h1>
+    </header>
+
+    <section class="d-flex">
+        <form class="searchBar row col-3 d-flex" role="search">
+            <h2>Search for a City:</h2>
+            <input id="cities" class="form-control me-2" type="search" placeholder="Enter City Here"
+                aria-label="Search">
+            <button id="searchBtn" class="btn btn-primary" type="submit">Search</button>
+            <div class="searchHistory"></div>
+        </form>
+
+        <section class="col-9">
+            <div class="containerMain">
+                <h4 id="display"></h4>
+                <h5 id="temp"></h5>
+                <h5 id="wind"></h5>
+                <h5 id="humidity"></h5>
+            </div>
+            <div class="row container5Day">
+                <h5>5-Day Forecast</h5>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4" id="forecastResults">
+                    <div class="card">
+                        <h4 id="display-1"></h4>
+                        <img id="icon1" src="">
+                        <h5 id="temp-1"></h5>
+                        <h5 id="wind-1"></h5>
+                        <h5 id="humidity-1"></h5>
+                    </div>
+                    <div class="card">
+                        <h4 id="display-2"></h4>
+                        <img id="icon2" src="">
+                        <h5 id="temp-2"></h5>
+                        <h5 id="wind-2"></h5>
+                        <h5 id="humidity-2"></h5>
+                    </div>
+                    <div class="card">
+                        <h4 id="display-3"></h4>
+                        <img id="icon3" src="">
+                        <h5 id="temp-3"></h5>
+                        <h5 id="wind-3"></h5>
+                        <h5 id="humidity-3"></h5>
+                    </div>
+                    <div class="card">
+                        <h4 id="display-4"></h4>
+                        <img id="icon4" src="">
+                        <h5 id="temp-4"></h5>
+                        <h5 id="wind-4"></h5>
+                        <h5 id="humidity-4"></h5>
+                    </div>
+                    <div class="card">
+                        <h4 id="display-5"></h4>
+                        <img id="icon5" src="">
+                        <h5 id="temp-5"></h5>
+                        <h5 id="wind-5"></h5>
+                        <h5 id="humidity-5"></h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
