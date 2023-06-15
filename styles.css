@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif  ;
     background-color: rgba(128, 128, 128, 0.3); /* Opaque grey background for header */
 }
 
@@ -34,7 +35,15 @@ body {
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.3); /* Opaque white background for cards */
     text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif  ;
+    font-weight: bold;
     box-sizing: border-box;
+}
+
+#forecastResults {
+    display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (max-width: 991px) {
