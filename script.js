@@ -21,13 +21,15 @@ searchForm.addEventListener('submit', e => {
 
 // add history to search and displat it when the input field is used
 function addToSearchHistory(city) {
-    searchHistoryArray.push(city)
-    localStorage.setItem('search-history', JSON.stringify(searchHistoryArray))
-
-    const searchHistoryItem = document.createElement('div')
-    searchHistoryItem.classList.add('search-history-item')
-    searchHistoryItem.textContent = city
-    searchHistoryContainer.appendChild(searchHistoryItem)
+    if(!searchHistoryArray.includes(city)){
+        searchHistoryArray.push(city)
+        localStorage.setItem('search-history', JSON.stringify(searchHistoryArray))
+    
+        const searchHistoryItem = document.createElement('div')
+        searchHistoryItem.classList.add('search-history-item')
+        searchHistoryItem.textContent = city
+        searchHistoryContainer.appendChild(searchHistoryItem)
+    }
 }
 
 searchHistoryContainer.addEventListener('click', e => {
