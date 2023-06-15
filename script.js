@@ -7,6 +7,7 @@ const windElement = document.getElementById('wind')
 const humidityElement = document.getElementById('humidity')
 const forecastResults = document.getElementById('forecastResults')
 const searchHistoryContainer = document.querySelector('.searchHistory')
+let searchHistoryArray = JSON.parse(localStorage.getItem('search-history'))
 
 // event listeners
 searchForm.addEventListener('submit', e => {
@@ -91,6 +92,9 @@ function displayForecast(data) {
 
 // add history to search and displat it when the input field is used
 function addToSearchHistory(city) {
+    searchHistoryArray.push(city)
+    localStorage.setItem('search-history', JSON.stringify(searchHistoryArray))
+
     const searchHistoryItem = document.createElement('div')
     searchHistoryItem.classList.add('search-history-item')
     searchHistoryItem.textContent = city
