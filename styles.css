@@ -19,6 +19,14 @@ body {
     margin: 0 auto;
 }
 
+.yourCities {
+    font-size: 30px;
+}
+/* .searchhistory {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
 .containerMain {
     text-align: center;
     margin-bottom: 20px;
@@ -33,7 +41,7 @@ body {
 .card {
     flex-basis: calc(20% - 20px);
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.3); /* Opaque white background for cards */
+    background-color: rgba(255, 255, 255, 0.3); 
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif  ;
     font-weight: bold;
