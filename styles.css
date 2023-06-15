@@ -1,16 +1,26 @@
 body {
-    background-color: #14213D; 
+    background-color: #14213D; /* Dark blue background */
     color: white;
 }
 
-.header {
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.3); /* Opaque grey background for header */
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.containerMain {
     text-align: center;
-    background-color: grey;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.3); 
-    color: white;
+    margin-bottom: 20px;
 }
 
 .container5Day {
@@ -22,6 +32,9 @@ body {
 .card {
     flex-basis: calc(20% - 20px);
     margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Opaque white background for cards */
+    text-align: center;
+    box-sizing: border-box;
 }
 
 @media (max-width: 991px) {
